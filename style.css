@@ -1,0 +1,11 @@
+body{
+    background-image: linear-gradient(rgb(71, 180, 113), rgb(96, 230, 96), rgb(57, 160, 57));
+}
+
+.list{
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(19, 216, 150);
+    background-color: rgb(67, 191, 207);
+    
+}
