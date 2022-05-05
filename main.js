@@ -1,14 +1,11 @@
-/*Webcam.set({
+Webcam.set({
     width : 250,
     height: 350,
     
     image_format: 'png',
     png_quality: 90
 });
-Webcam.attach("#cam");*/
-Webcam.attach( '#cam' ); 
-camera = document.getElementById("cam"); 
-Webcam.set({ width:350, height:300, image_format : 'png', png_quality:90 });
+Webcam.attach("#cam");
 
 
 function screenshot() {
@@ -36,7 +33,7 @@ function woof(error, result) {
     if (error) {
         console.error(error);
     } else {
-        accurate= result[0].confidence.toFixed(4)*100;
+        accurate= Math.floor(result[0].confidence*100);
         console.log(result);
         document.getElementById("pet").innerHTML=result[0].label;
         document.getElementById("confident").innerHTML=accurate+"%";
